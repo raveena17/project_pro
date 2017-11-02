@@ -32,7 +32,7 @@ class LogoutView( APIView ):
         return Response( status=status.HTTP_200_OK )
 
 
-class UsersByGroupView( APIView ):
+class UsersView( APIView ):
 
     def post(self, request, format=None):
         users = User.objects.filter(groups__name__in=request.data.get( 'group_names' ))
