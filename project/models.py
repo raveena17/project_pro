@@ -38,8 +38,8 @@ class Project( models.Model ):
 
 class ProjectTeam( models.Model ):
     name = models.CharField(max_length=30)
-    leads = models.ManyToManyField(User)
-    members = models.ManyToManyField(User)
+    leads = models.ManyToManyField(User, related_name='project_leads')
+    members = models.ManyToManyField(User, related_name='project_members')
     project = models.ForeignKey(Project)
 
     class Meta:
