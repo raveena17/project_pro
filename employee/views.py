@@ -3,6 +3,7 @@ from __future__ import unicode_literals
 
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.models import User
+from django.db.models import Q
 
 from rest_framework.views import APIView
 from rest_framework.authtoken.models import Token
@@ -35,6 +36,9 @@ class LogoutView( APIView ):
 class UsersView( APIView ):
 
     def post(self, request, format=None):
-        users = User.objects.filter(groups__name__in=request.data.get( 'group_names' ))
+        query = Q()
+        if 'group_names' in request.data:
+            query &= Q(groups__name__in=request.data.get( 'group_names' ))
+        users = User.objects.all().filter(query)
         serializer = UserSerializer(users, many=True)
         return Response( serializer.data, status=status.HTTP_200_OK )
