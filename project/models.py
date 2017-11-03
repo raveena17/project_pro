@@ -14,8 +14,8 @@ class ProjectStatus( models.Model ):
 
 class Approval( models.Model ):
     approver = models.ForeignKey(User, on_delete=models.CASCADE)
-    approved_on = models.DateTimeField()
-    comment = models.TextField()
+    approved_on = models.DateTimeField(blank=True, null=True)
+    comment = models.TextField(blank=True, null=True)
     is_approved = models.BooleanField(default=False)
 
     class Meta:
@@ -25,7 +25,7 @@ class Approval( models.Model ):
 class Project( models.Model ):
     name = models.CharField(max_length=30)
     description = models.TextField()
-    status = models.ForeignKey(ProjectStatus, on_delete=models.CASCADE)
+    status = models.ForeignKey(ProjectStatus, on_delete=models.CASCADE, default='INITIATED')
     start_date = models.DateTimeField()
     end_date = models.DateTimeField()
     approvers = models.ManyToManyField(Approval)

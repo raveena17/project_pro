@@ -22,5 +22,6 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^login/', LoginView.as_view(), name='login'),
     url(r'^logout/', LogoutView.as_view(), name='logout'),
-    url(r'^user/', include('employee.urls'))
+    url(r'^user/', include('employee.urls')),
+    url(r'^project/', include('project.urls'))
 ]
