@@ -1,0 +1,184 @@
+{
+	"variables": [],
+	"info": {
+		"name": "project_pro",
+		"_postman_id": "b18c82de-4cd8-a599-34bd-3eecf99f8321",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "login",
+			"request": {
+				"url": "{{HOST }}/login/",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"username\": \"mukilan\",\n\t\"password\": \"user@pro\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "logout",
+			"request": {
+				"url": "{{HOST }}/logout/",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "users",
+			"request": {
+				"url": "{{HOST }}/user/list/",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "users by group",
+			"request": {
+				"url": "{{HOST }}/user/list/",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"group_names\": [ \"MANAGER\" ]\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "project list",
+			"request": {
+				"url": "{{HOST }}/project/list/",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "projects by status",
+			"request": {
+				"url": "{{HOST }}/project/list/",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"status_list\": [ \"INITIATED\" ]\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "status list",
+			"request": {
+				"url": "{{HOST }}/project/status/",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "project create",
+			"request": {
+				"url": "{{HOST }}/project/list/",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"id\": 1,\n\t\"name\": \"UBIXI\",\n\t\"description\": \"UBIXI\",\n\t\"start_date\": \"2017-11-02T14:29:57Z\",\n\t\"end_date\": \"2018-01-31T14:30:03Z\",\n\t\"requested_on\": \"2017-11-02T14:30:37.379122Z\",\n\t\"status\": 1,\n\t\"requested_by\": 1,\n\t\"approvers\": [\n\t  1\n\t]\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "project update",
+			"request": {
+				"url": "{{HOST }}/project/4/",
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\": \"UBIXI1\",\n\t\"description\": \"UBIXI\",\n\t\"start_date\": \"2017-11-02T14:29:57Z\",\n\t\"end_date\": \"2018-01-31T14:30:03Z\",\n\t\"requested_on\": \"2017-11-02T14:30:37.379122Z\",\n\t\"status\": 1,\n\t\"requested_by\": 1,\n\t\"approvers\": [\n\t  1\n\t]\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "project delete",
+			"request": {
+				"url": "{{HOST }}/project/4/",
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
