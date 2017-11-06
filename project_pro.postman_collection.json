@@ -110,7 +110,7 @@
 			"response": []
 		},
 		{
-			"name": "status list",
+			"name": "project status list",
 			"request": {
 				"url": "{{HOST }}/project/status/",
 				"method": "GET",
@@ -176,6 +176,88 @@
 					"mode": "raw",
 					"raw": ""
 				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "task list",
+			"request": {
+				"url": "{{HOST }}/task/list/",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "task create",
+			"request": {
+				"url": "{{HOST }}/task/list/",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\": \"UI\",\n\t\"description\": \"UI\",\n\t\"start_date\": \"2017-11-06T08:09:26Z\",\n\t\"end_date\": \"2017-11-30T08:09:30Z\",\n\t\"assigned_to\": 2,\n\t\"assigned_By\": 3,\n\t\"status\": 1,\n\t\"project\": 1\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "task update",
+			"request": {
+				"url": "{{HOST }}/task/2/",
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\": \"UI2\",\n\t\"description\": \"UI\",\n\t\"start_date\": \"2017-11-06T08:09:26Z\",\n\t\"end_date\": \"2017-11-30T08:09:30Z\",\n\t\"assigned_to\": 2,\n\t\"assigned_By\": 3,\n\t\"status\": 1,\n\t\"project\": 1\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "task delete",
+			"request": {
+				"url": "{{HOST }}/task/1/",
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "task status list",
+			"request": {
+				"url": "{{HOST }}/task/status/",
+				"method": "GET",
+				"header": [],
+				"body": {},
 				"description": ""
 			},
 			"response": []
