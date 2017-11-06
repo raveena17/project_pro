@@ -20,9 +20,10 @@ class TaskDetail( generics.RetrieveUpdateDestroyAPIView ):
     queryset = Task.objects.all()
     serializer_class = TaskSerializer
 
-class TaskStatusView( APIView ):
+class TaskStatusList( generics.ListCreateAPIView ):
+    queryset = Task.objects.all()
+    serializer_class = TaskStatusSerializer
 
-    def get(self, request, format=None):
-        status_list = TaskStatus.objects.all()
-        serializer = TaskStatusSerializer(status_list, many=True)
-        return Response(serializer.data, status=status.HTTP_200_OK)
+class TaskStatusDetail( generics.RetrieveUpdateDestroyAPIView ):
+    queryset = Task.objects.all()
+    serializer_class = TaskStatusSerializer

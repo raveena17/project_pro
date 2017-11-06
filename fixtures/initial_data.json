@@ -24,21 +24,42 @@
     "model": "task.TaskStatus",
     "pk": 1,
     "fields": {
-      "name": "CREATED"
+      "name": "OPEN"
     }
   },
   {
     "model": "task.TaskStatus",
     "pk": 2,
     "fields": {
-      "name": "INPROGRESS"
+      "name": "TO DO"
     }
   },
   {
     "model": "task.TaskStatus",
     "pk": 3,
     "fields": {
-      "name": "COMPLETED"
+      "name": "IN PROGRESS"
+    }
+  },
+  {
+    "model": "task.TaskStatus",
+    "pk": 3,
+    "fields": {
+      "name": "UNDER REVIEW"
+    }
+  },
+  {
+    "model": "task.TaskStatus",
+    "pk": 3,
+    "fields": {
+      "name": "REOPENED"
+    }
+  },
+  {
+    "model": "task.TaskStatus",
+    "pk": 3,
+    "fields": {
+      "name": "DONE"
     }
   }
 ]

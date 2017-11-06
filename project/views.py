@@ -20,9 +20,10 @@ class ProjectDetail( generics.RetrieveUpdateDestroyAPIView ):
     queryset = Project.objects.all()
     serializer_class = ProjectSerializer
 
-class ProjectStatusView( APIView ):
+class ProjectStatusList( generics.ListCreateAPIView ):
+    queryset = ProjectStatus.objects.all()
+    serializer_class = ProjectStatusSerializer
 
-    def get(self, request, format=None):
-        status_list = ProjectStatus.objects.all()
-        serializer = ProjectStatusSerializer(status_list, many=True)
-        return Response(serializer.data, status=status.HTTP_200_OK)
+class ProjectStatusDetail( generics.RetrieveUpdateDestroyAPIView ):
+    queryset = ProjectStatus.objects.all()
+    serializer_class = ProjectStatusSerializer
