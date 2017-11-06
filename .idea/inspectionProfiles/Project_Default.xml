@@ -16,6 +16,7 @@
         <list>
           <option value="project.models.Project.objects" />
           <option value="project.models.ProjectStatus.*" />
+          <option value="task.models.Task.objects" />
         </list>
       </option>
     </inspection_tool>

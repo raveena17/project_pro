@@ -1,0 +1,44 @@
+[
+  {
+    "model": "project.ProjectStatus",
+    "pk": 1,
+    "fields": {
+      "name": "INITIATED"
+    }
+  },
+  {
+    "model": "project.ProjectStatus",
+    "pk": 2,
+    "fields": {
+      "name": "INPROGRESS"
+    }
+  },
+  {
+    "model": "project.ProjectStatus",
+    "pk": 3,
+    "fields": {
+      "name": "COMPLETED"
+    }
+  },
+  {
+    "model": "task.TaskStatus",
+    "pk": 1,
+    "fields": {
+      "name": "CREATED"
+    }
+  },
+  {
+    "model": "task.TaskStatus",
+    "pk": 2,
+    "fields": {
+      "name": "INPROGRESS"
+    }
+  },
+  {
+    "model": "task.TaskStatus",
+    "pk": 3,
+    "fields": {
+      "name": "COMPLETED"
+    }
+  }
+]
