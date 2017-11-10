@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'rest_framework', # rest framework
     'rest_framework.authtoken',
+    'corsheaders',
     'pro_user',
     'project',
     'task'
@@ -52,6 +53,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'corsheaders.middleware.CorsMiddleware', #Added for cors    
 ]
 
 ROOT_URLCONF = 'project_pro.urls'
@@ -129,3 +131,5 @@ STATIC_URL = '/static/'
 FIXTURE_DIRS = [
     os.path.join(BASE_DIR, 'fixtures')
 ]
+
+CORS_ORIGIN_ALLOW_ALL = True
